@@ -1,0 +1,1 @@
+Mon Sep 20 2021 06:28:42 GMT-0400 (Amazon Standard Time) - ERROR - 400 -> Nenhum resultado com os parametros passados
