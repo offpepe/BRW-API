@@ -1,5 +1,10 @@
 const integrants = require('../data/integrants');
 
+const err400 = { 
+  code: 400,
+  message: `Nenhum resultado encontrado os parâmetros`,
+ };
+
 const getAllBRW = (_req, res) => {
   const { BRW } = integrants;
   res.status(200).send(BRW);
@@ -18,11 +23,7 @@ const getQueryBRW = (req, res, next) => {
     if (filtered.length !== 0) {
       res.status(200).send(filtered);
       } else {
-      const err = { 
-        code: 400,
-        message: 'Nenhum resultado com os parametros passados',
-       };
-      next(err);
+      next(err400);
       }
 };
 
@@ -34,11 +35,7 @@ const getQueryBrodi = (req, res, next) => {
     if (filtered) {
     res.status(200).send(filtered);
     } else {
-    const err = { 
-      code: 400,
-      message: 'Nenhum resultado com os parametros passados',
-     };
-    next(err);
+    next(err400);
     }
 };
 
