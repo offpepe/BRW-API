@@ -2,6 +2,8 @@
 
 # BRW API
 
+![BRW unOfficial icon](https://user-images.githubusercontent.com/62621800/133978293-25977c7d-dcfe-4e27-a554-d3a8da0ef2c0.png)
+  
 </div>
 
 ## Purpose
@@ -22,3 +24,4 @@ There's a lot of games where BRW exists, but mostly in:
 - Pokemon Go;
 - Rocket League;
 - New World.
+
