@@ -17,6 +17,7 @@ const getAllBrodi = (_req, res) => {
 
 const getQueryBRW = (req, res, next) => {
     const { BRW } = integrants;
+    console.log(req.body);
     const { name, nickname } = req.query;
     const filtered = BRW
       .filter((Brow) => Brow.name === name || Brow.nickname.some((nick) => nick === nickname));
