@@ -4,9 +4,9 @@ const router = express.Router();
 
 router.get('/', (_req, res) => res.status(200).send('Welcome to BRW API V1'));
 
-router.get('/BRW/search', middleware.getAllBRW);
+router.get('/BRW', middleware.getAllBRW);
 
-router.get('/Brodi/search', middleware.getAllBrodi);
+router.get('/Brodi', middleware.getAllBrodi);
 
 router.get('/BRW/search', middleware.getQueryBRW);
 
