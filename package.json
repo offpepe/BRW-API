@@ -1,0 +1,27 @@
+{
+  "name": "brows_integrants_api",
+  "version": "1.0.0",
+  "description": "example to api that'll run BRW main website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "npm test mocha"
+  },
+  "keywords": [
+    "BRWAPI"
+  ],
+  "author": "Alan Albuquerque F. Lopes",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "curs": "^1.0.2",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "eslint": "^7.32.0",
+    "mocha": "^9.1.1"
+  }
+}
