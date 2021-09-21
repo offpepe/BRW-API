@@ -1,6 +1,8 @@
+const { err401 } = require('../data/errors');
+
 const auth = (req, res, next) => {
     const { authorization } = req.headers;
-    if (authorization !== 'brwToken') return res.status(401).send('Não autorizado!');
+    if (authorization !== 'brwToken') return next(err401);
     next();
 }
 

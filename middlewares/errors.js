@@ -2,11 +2,10 @@ const fs = require('fs').promises;
 
 const notFound = (err, req, res, next) => {
   const { message, code } = err;
-  const { name, nickname } = req.query
   const date = new Date();
-  const content = `${date} - ERROR - ${code} -> ${message}: ${name} | ${nickname}`;
+  const content = `${date} - ERROR - ${code} -> ${message} ::: ${JSON.stringify(req.query)} | ${JSON.stringify(req.params)}`;
   return fs.writeFile(`./logs/${date}.txt`, content)
-    .then(() => res.status(400).send(content))
+    .then(() => res.status(code).send(content))
     .catch((e) => next(e));
 }
 

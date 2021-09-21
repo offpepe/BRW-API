@@ -1,0 +1,1 @@
+Tue Sep 21 2021 10:26:09 GMT-0400 (Amazon Standard Time) - ERROR - 401 -> Acesso não autorizado. ::: [object Object] | [object Object]

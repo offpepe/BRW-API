@@ -1,9 +1,5 @@
 const integrants = require('../data/integrants');
-
-const err400 = { 
-  code: 400,
-  message: `Nenhum resultado encontrado os parâmetros`,
- };
+const { err400 } = require('../data/errors');
 
 const getAllBRW = (_req, res) => {
   const { BRW } = integrants;
