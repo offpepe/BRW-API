@@ -7,12 +7,12 @@ const err400 = {
 
 const getAllBRW = (_req, res) => {
   const { BRW } = integrants;
-  res.status(200).send(BRW);
+  return res.status(200).send(BRW);
 };
 
 const getAllBrodi = (_req, res) => {
     const { Brodi } = integrants;
-    res.status(200).send(Brodi);
+    return res.status(200).send(Brodi);
 };
 
 const getQueryBRW = (req, res, next) => {
@@ -22,7 +22,7 @@ const getQueryBRW = (req, res, next) => {
     const filtered = BRW
       .filter((Brow) => Brow.name === name || Brow.nickname.some((nick) => nick === nickname));
     if (filtered.length !== 0) {
-      res.status(200).send(filtered);
+      return res.status(200).send(filtered);
       } else {
       next(err400);
       }
@@ -34,7 +34,7 @@ const getQueryBrodi = (req, res, next) => {
     const filtered = Brodi
       .filter((Brodi) => Brodi.name === name || Brodi.nickname.some((nick) => nick === nickname));
     if (filtered) {
-    res.status(200).send(filtered);
+    return res.status(200).send(filtered);
     } else {
     next(err400);
     }

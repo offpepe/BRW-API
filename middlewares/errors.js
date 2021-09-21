@@ -5,7 +5,7 @@ const notFound = (err, req, res, next) => {
   const { name, nickname } = req.query
   const date = new Date();
   const content = `${date} - ERROR - ${code} -> ${message}: ${name} | ${nickname}`;
-  fs.writeFile(`./logs/${date}.txt`, content)
+  return fs.writeFile(`./logs/${date}.txt`, content)
     .then(() => res.status(400).send(content))
     .catch((e) => next(e));
 }

@@ -1,0 +1,1 @@
+Mon Sep 20 2021 19:47:44 GMT-0400 (Amazon Standard Time) - ERROR - 400 -> Nenhum resultado encontrado os parâmetros: undefined | Gio
